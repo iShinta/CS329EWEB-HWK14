@@ -4,7 +4,7 @@
   function start(){
     //Selon l'avancee du quiz, on va inclure une version differente
     if(!isset($_COOKIE["id"])){ //Not in a session
-      echo "Not signed in<br />";
+      //echo "Not signed in<br />";
       //If session variable exist, that means Quiz has ended
       session_start();
       if(isset($_SESSION["score"])){
@@ -36,7 +36,7 @@
           if(array_key_exists($username, $usertest)){ //Already took the test
             echo "Sorry. " .$username. " already took the test<br />";
           }else{
-            echo "You didn't take the test yet<br />";
+            //echo "You didn't take the test yet<br />";
             //Get list of usernames and passwords
             $fh = fopen("passwd", "r");
             //Check if username is already taken
@@ -56,9 +56,9 @@
               setcookie("timeloggedin", time(), time()+900);
               $_SESSION["name"] = $username;
               $_SESSION["question"] = 1;
-              echo "Session ".$_SESSION["question"]."<br />";
+              //echo "Session ".$_SESSION["question"]."<br />";
               $_SESSION["score"] = 0;
-              echo "Score ".$_SESSION["score"]."<br />";
+              //echo "Score ".$_SESSION["score"]."<br />";
               ?><a href="index.php">Start the Quiz</a><?php
             }else{
               echo "Login Failed.<br />Bad username or password";
@@ -74,8 +74,10 @@
     }else{ //In a session
       session_start();
       echo "You're logged in ".$_SESSION["name"]."<br/>";
-      print_r("Current score: ".$_SESSION["score"]."<br />");
-      print_r("Question ".$_SESSION["question"]."<br />");
+      if($_SERVER['REQUEST_METHOD'] !== 'POST'){
+        print_r("Current score: ".$_SESSION["score"]."<br />");
+        print_r("Question ".$_SESSION["question"]."<br />");
+      }
 
       if($_SESSION["question"] == 1){ //Q1
         if(isset($_POST["q1"])){
@@ -131,7 +133,7 @@
       }else if($_SESSION["question"] == 3){ //Q3
         if(isset($_POST["q3a"]) || isset($_POST["q3b"]) || isset($_POST["q3c"]) || isset($_POST["q3d"])){
           echo "Check Question 3";
-          if($_POST["q3b"] == "q3b"){
+          if($_POST["q3b"] == "q3b" && $_POST["q3a"] != "q3a" && $_POST["q3c"] != "q3c" && $_POST["q3d"] != "q3d"){
             echo "Right answer";
             $_SESSION["score"] += 1;
           }
@@ -156,7 +158,7 @@
       }else if($_SESSION["question"] == 4){ //Q4
         if(isset($_POST["q4a"]) || isset($_POST["q4b"]) || isset($_POST["q4c"]) || isset($_POST["q4d"])){
           echo "Check Question 4";
-          if($_POST["q4b"] == "q4d"){
+          if($_POST["q4d"] == "q4d" && $_POST["q4a"] != "q4a" && $_POST["q4b"] != "q4b" && $_POST["q4c"] != "q4c"){
             echo "Right answer";
             $_SESSION["score"] += 1;
           }
@@ -248,6 +250,8 @@
     fclose($fh2);
 
     echo "Destrying Session";
+    setcookie("id", "", time()-3600);
+    setcookie("timeloggedin", "", time()-3600);
     // remove all session variables
     session_unset();
     // destroy the session
