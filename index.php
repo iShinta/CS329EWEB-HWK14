@@ -54,6 +54,7 @@
               echo "Login Succeeded. Welcome ".$username. ".<br />";
               setcookie("id", $username, time()+900);
               setcookie("timeloggedin", time(), time()+900);
+              $_SESSION["name"] = $username;
               $_SESSION["question"] = 1;
               echo "Session ".$_SESSION["question"]."<br />";
               $_SESSION["score"] = 0;
@@ -72,7 +73,7 @@
       }
     }else{ //In a session
       session_start();
-      echo "You're logged in ".$_COOKIE["id"]."<br/>";
+      echo "You're logged in ".$_SESSION["name"]."<br/>";
       print_r("Current score: ".$_SESSION["score"]."<br />");
       print_r("Question ".$_SESSION["question"]."<br />");
 
@@ -239,7 +240,7 @@
     echo "Saving Scores";
     //Save state in results
     $fh2 = fopen("passwd.txt", "a");
-    fwrite($fh2, $username.":".$_SESSION["score"]."\n");
+    fwrite($fh2, $_SESSION["name"].":".$_SESSION["score"]."\n");
     fclose($fh2);
 
     echo "Destrying Session";
