@@ -4,11 +4,11 @@
   function start(){
     //Selon l'avancee du quiz, on va inclure une version differente
     if(!isset($_COOKIE["id"])){ //Not in a session
-      echo "Not signed in";
+      echo "Not signed in<br />";
       if($_SERVER['REQUEST_METHOD'] === 'POST'){ //POST
         //If session is open, that means Quiz has ended
         if(isset($_SESSION)){
-          echo "Quiz ended.";
+          echo "Quiz ended.<br />";
           //Destroy session
           destroySession();
         }
@@ -31,7 +31,7 @@
           fclose($fh);
 
           if(array_key_exists($username, $usertest)){ //Already took the test
-            echo "Sorry. " .$username. " already took the test";
+            echo "Sorry. " .$username. " already took the test<br />";
           }else{
             echo "You didn't take the test yet";
             //Get list of usernames and passwords
