@@ -74,12 +74,8 @@
     }else{ //In a session
       session_start();
       echo "You're logged in ".$_SESSION["name"]."<br/>";
-      if($_SERVER['REQUEST_METHOD'] === 'POST'){
-        echo"";
-      }else{
-        print_r("Current score: ".$_SESSION["score"]."<br />");
-        print_r("Question ".$_SESSION["question"]."<br />");
-      }
+      print_r("Current score: ".$_SESSION["score"]."<br /><br />");
+      print_r("<h2>Question ".$_SESSION["question"]."</h2><br /><br />");
 
       if($_SESSION["question"] == 1){ //Q1
         if(isset($_POST["q1"])){
