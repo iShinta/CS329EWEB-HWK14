@@ -106,7 +106,7 @@
         if(isset($_POST["q2"])){
           echo "Check Question 2";
           echo $_POST["q2"];
-          if($_POST["q2"] == on){
+          if($_POST["q2"] == 'q2a'){
             echo "Right answer";
             $_SESSION["score"] += 1;
           }else{
@@ -131,7 +131,7 @@
       }else if($_SESSION["question"] == 3){ //Q3
         if(isset($_POST["q3a"]) || isset($_POST["q3b"]) || isset($_POST["q3c"]) || isset($_POST["q3d"])){
           echo "Check Question 3";
-          if($_POST["q3b"] == "Yes"){
+          if($_POST["q3b"] == "q3b"){
             echo "Right answer";
             $_SESSION["score"] += 1;
           }
@@ -145,10 +145,10 @@
           ?>
           <form name="quiz" method="post">
             <div><br />3) The total amount of energy that a star emits is directly related to its
-        		<br /><input value="No" name="q3a" type="checkbox" />a) surface gravity and magnetic field
-        		<br /><input value="No" name="q3b" type="checkbox" />b) radius and temperature
-        		<br /><input value="No" name="q3c" type="checkbox" />c) pressure and volume
-        		<br /><input value="No" name="q3d" type="checkbox" />d) location and velocity</div>
+        		<br /><input value="q3a" name="q3a" type="checkbox" />a) surface gravity and magnetic field
+        		<br /><input value="q3b" name="q3b" type="checkbox" />b) radius and temperature
+        		<br /><input value="q3c" name="q3c" type="checkbox" />c) pressure and volume
+        		<br /><input value="q3d" name="q3d" type="checkbox" />d) location and velocity</div>
             <br /><input name="submit" type="submit" value="Grade this question" /><input name="reset" type="reset" value="Clear" />
           </form>
           <?php
@@ -156,7 +156,7 @@
       }else if($_SESSION["question"] == 4){ //Q4
         if(isset($_POST["q4a"]) || isset($_POST["q4b"]) || isset($_POST["q4c"]) || isset($_POST["q4d"])){
           echo "Check Question 4";
-          if($_POST["q4b"] == "Yes"){
+          if($_POST["q4b"] == "q4d"){
             echo "Right answer";
             $_SESSION["score"] += 1;
           }
@@ -170,10 +170,10 @@
           ?>
           <form name="quiz" method="post">
             <div><br />4) Stars that live the longest have
-        		<br /><input value="No" name="q4a" type="checkbox" />a) high mass
-        		<br /><input value="No" name="q4b" type="checkbox" />b) high temperature
-        		<br /><input value="No" name="q4c" type="checkbox" />c) lots of hydrogen
-        		<br /><input value="No" name="q4d" type="checkbox" />d) small mass</div>
+        		<br /><input value="q4a" name="q4a" type="checkbox" />a) high mass
+        		<br /><input value="q4b" name="q4b" type="checkbox" />b) high temperature
+        		<br /><input value="q4c" name="q4c" type="checkbox" />c) lots of hydrogen
+        		<br /><input value="q4d" name="q4d" type="checkbox" />d) small mass</div>
             <br /><input name="submit" type="submit" value="Grade this question" /><input name="reset" type="reset" value="Clear" />
           </form>
           <?php
