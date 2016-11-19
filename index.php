@@ -11,6 +11,8 @@
           echo "Quiz ended.<br />";
           //Destroy session
           destroySession();
+        }else{
+          echo "Test";
         }
 
         //Check credentials
@@ -98,7 +100,7 @@
         }
       }else if($_SESSION["question"] == 2){ //Q2
         if(isset($_POST["q2"])){
-          echo "Check Question 1";
+          echo "Check Question 2";
           if($_POST["q2"] == "q2a"){
             echo "Right answer";
             $_SESSION["score"] += 1;
@@ -123,8 +125,9 @@
         }
       }else if($_SESSION["question"] == 3){ //Q3
         if(isset($_POST["q3"])){
-          echo "Check Question 1";
+          echo "Check Question 3";
           if($_POST["q3"] == "q3b"){
+            echo "Right answer";
             $_SESSION["score"] += 1;
           }
           $_SESSION["question"] +=1;
@@ -146,9 +149,10 @@
           <?php
         }
       }else if($_SESSION["question"] == 4){ //Q4
-        if(isset($_POST["q1"])){
-          echo "Check Question 1";
-          if($_POST["q1"] == "q1b"){
+        if(isset($_POST["q4"])){
+          echo "Check Question 4";
+          if($_POST["q4"] == "q4b"){
+            echo "Right answer";
             $_SESSION["score"] += 1;
           }
           $_SESSION["question"] +=1;
@@ -170,9 +174,10 @@
           <?php
         }
       }else if($_SESSION["question"] == 5){ //Q5
-        if(isset($_POST["q1"])){
-          echo "Check Question 1";
-          if($_POST["q1"] == "q1b"){
+        if(isset($_POST["q5"])){
+          echo "Check Question 5";
+          if($_POST["q5"] == "q5b"){
+            echo "Right answer";
             $_SESSION["score"] += 1;
           }
           $_SESSION["question"] +=1;
@@ -190,9 +195,10 @@
           <?php
         }
       }else if($_SESSION["question"] == 6){ //Q6
-        if(isset($_POST["q1"])){
-          echo "Check Question 1";
-          if($_POST["q1"] == "q1b"){
+        if(isset($_POST["q6"])){
+          echo "Check Question 6";
+          if($_POST["q6"] == "q6b"){
+            echo "Right answer";
             $_SESSION["score"] += 1;
           }
           $_SESSION["question"] +=1;
