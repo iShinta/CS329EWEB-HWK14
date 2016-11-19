@@ -83,9 +83,12 @@
           <?php
         }else{
           ?>
-          <div>1) According to Kepler the orbit of the earth is a circle with the sun at the center.
-      		<br /><input id="q1a" name="q1" type="radio" />a) True
-      		<br /><input id="q1b" name="q1" type="radio" />b) False</div>
+          <form name="quiz" method="post">
+            <div>1) According to Kepler the orbit of the earth is a circle with the sun at the center.
+        		<br /><input id="q1a" name="q1" type="radio" />a) True
+        		<br /><input id="q1b" name="q1" type="radio" />b) False</div>
+            <br /><input name="submit" type="button" value="Grade this question" /><input name="reset" type="reset" value="Clear" />
+          </form>
           <?php
         }
       }else if($_SESSION["question"] == 2){
@@ -100,9 +103,12 @@
           <?php
         }else{
           ?>
-          <div><br />2) Ancient astronomers did consider the heliocentric model of the solar system but rejected it because they could not detect parallax.
-      		<br /><input id="q2a" name="q2" type="radio" />a) True
-      		<br /><input id="q2b" name="q2" type="radio" />b) False</div>
+          <form name="quiz" method="post">
+            <div><br />2) Ancient astronomers did consider the heliocentric model of the solar system but rejected it because they could not detect parallax.
+        		<br /><input id="q2a" name="q2" type="radio" />a) True
+      		  <br /><input id="q2b" name="q2" type="radio" />b) False</div>
+            <br /><input name="submit" type="button" value="Grade this question" /><input name="reset" type="reset" value="Clear" />
+          </form>
           <?php
         }
       }else if($_SESSION["question"] == 3){
@@ -117,9 +123,12 @@
           <?php
         }else{
           ?>
-          <div><br />2) Ancient astronomers did consider the heliocentric model of the solar system but rejected it because they could not detect parallax.
-      		<br /><input id="q2a" name="q2" type="radio" />a) True
-      		<br /><input id="q2b" name="q2" type="radio" />b) False</div>
+          <form name="quiz" method="post">
+            <div><br />2) Ancient astronomers did consider the heliocentric model of the solar system but rejected it because they could not detect parallax.
+        		<br /><input id="q2a" name="q2" type="radio" />a) True
+        		<br /><input id="q2b" name="q2" type="radio" />b) False</div>
+            <br /><input name="submit" type="button" value="Grade this question" /><input name="reset" type="reset" value="Clear" />
+          </form>
           <?php
         }
       }else if($_SESSION["question"] == 4){
@@ -134,9 +143,12 @@
           <?php
         }else{
           ?>
-          <div><br />2) Ancient astronomers did consider the heliocentric model of the solar system but rejected it because they could not detect parallax.
-      		<br /><input id="q2a" name="q2" type="radio" />a) True
-      		<br /><input id="q2b" name="q2" type="radio" />b) False</div>
+          <form name="quiz" method="post">
+            <div><br />2) Ancient astronomers did consider the heliocentric model of the solar system but rejected it because they could not detect parallax.
+        		<br /><input id="q2a" name="q2" type="radio" />a) True
+        		<br /><input id="q2b" name="q2" type="radio" />b) False</div>
+            <br /><input name="submit" type="button" value="Grade this question" /><input name="reset" type="reset" value="Clear" />
+          </form>
           <?php
         }
       }else if($_SESSION["question"] == 5){
@@ -151,9 +163,12 @@
           <?php
         }else{
           ?>
-          <div><br />2) Ancient astronomers did consider the heliocentric model of the solar system but rejected it because they could not detect parallax.
-      		<br /><input id="q2a" name="q2" type="radio" />a) True
-      		<br /><input id="q2b" name="q2" type="radio" />b) False</div>
+          <form name="quiz" method="post">
+            <div><br />2) Ancient astronomers did consider the heliocentric model of the solar system but rejected it because they could not detect parallax.
+        		<br /><input id="q2a" name="q2" type="radio" />a) True
+        		<br /><input id="q2b" name="q2" type="radio" />b) False</div>
+            <br /><input name="submit" type="button" value="Grade this question" /><input name="reset" type="reset" value="Clear" />
+          </form>
           <?php
         }
       }else if($_SESSION["question"] == 6){
@@ -168,9 +183,12 @@
           <?php
         }else{
           ?>
-          <div><br />2) Ancient astronomers did consider the heliocentric model of the solar system but rejected it because they could not detect parallax.
-      		<br /><input id="q2a" name="q2" type="radio" />a) True
-      		<br /><input id="q2b" name="q2" type="radio" />b) False</div>
+          <form name="quiz" method="post">
+            <div><br />2) Ancient astronomers did consider the heliocentric model of the solar system but rejected it because they could not detect parallax.
+        		<br /><input id="q2a" name="q2" type="radio" />a) True
+        		<br /><input id="q2b" name="q2" type="radio" />b) False</div>
+            <br /><input name="submit" type="button" value="Grade this question" /><input name="reset" type="reset" value="Clear" />
+          </form>
           <?php
         }
       }else if($_SESSION["question"] == 7){
