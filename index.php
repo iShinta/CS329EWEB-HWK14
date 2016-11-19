@@ -69,7 +69,7 @@
         showLogin();
       }
     }else{ //In a session
-      echo "You're logged in";
+      echo "You're logged in<br/>";
       print_r("Current score: ".$_SESSION["score"]."<br />");
       print_r("Question ".$_SESSION["question"]."<br />");
 
