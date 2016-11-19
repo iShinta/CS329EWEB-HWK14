@@ -170,10 +170,10 @@
           ?>
           <form name="quiz" method="post">
             <div><br />4) Stars that live the longest have
-        		<br /><input id="q4a" name="q4a" type="checkbox" />a) high mass
-        		<br /><input id="q4b" name="q4b" type="checkbox" />b) high temperature
-        		<br /><input id="q4c" name="q4c" type="checkbox" />c) lots of hydrogen
-        		<br /><input id="q4d" name="q4d" type="checkbox" />d) small mass</div>
+        		<br /><input value="q4a" name="q4a" type="checkbox" />a) high mass
+        		<br /><input value="q4b" name="q4b" type="checkbox" />b) high temperature
+        		<br /><input value="q4c" name="q4c" type="checkbox" />c) lots of hydrogen
+        		<br /><input value="q4d" name="q4d" type="checkbox" />d) small mass</div>
             <br /><input name="submit" type="submit" value="Grade this question" /><input name="reset" type="reset" value="Clear" />
           </form>
           <?php
@@ -181,7 +181,7 @@
       }else if($_SESSION["question"] == 5){ //Q5
         if(isset($_POST["q5"])){
           echo "Check Question 5";
-          if($_POST["q5"] == "q5b"){
+          if($_POST["q5"] == "galaxy"){
             echo "Right answer";
             $_SESSION["score"] += 1;
           }
@@ -202,7 +202,7 @@
       }else if($_SESSION["question"] == 6){ //Q6
         if(isset($_POST["q6"])){
           echo "Check Question 6";
-          if($_POST["q6"] == "q6b"){
+          if($_POST["q6"] == "age"){
             echo "Right answer";
             $_SESSION["score"] += 1;
           }
