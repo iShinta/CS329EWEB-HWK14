@@ -33,7 +33,7 @@
           if(array_key_exists($username, $usertest)){ //Already took the test
             echo "Sorry. " .$username. " already took the test<br />";
           }else{
-            echo "You didn't take the test yet";
+            echo "You didn't take the test yet<br />";
             //Get list of usernames and passwords
             $fh = fopen("passwd", "r");
             //Check if username is already taken
@@ -53,9 +53,9 @@
               setcookie("timeloggedin", time(), time()+900);
               session_start();
               $_SESSION["question"] = 1;
-              echo "Session ".$_SESSION["question"];
+              echo "Session ".$_SESSION["question"]."<br />";
               $_SESSION["score"] = 0;
-              echo "Score ".$_SESSION["score"];
+              echo "Score ".$_SESSION["score"]."<br />";
               ?><a href="index.php">Start the Quiz</a><?php
             }else{
               echo "Login Failed.<br />Bad username or password";
@@ -69,7 +69,7 @@
         showLogin();
       }
     }else{ //In a session
-      echo "You're logged in<br/>";
+      echo "You're logged in ".$COOKIE["id"]."<br/>";
       print_r("Current score: ".$_SESSION["score"]."<br />");
       print_r("Question ".$_SESSION["question"]."<br />");
 
@@ -194,7 +194,7 @@
           <?php
         }
       }else if($_SESSION["question"] == 7){
-        echo "Reached the last question. Quiz ended.";
+        echo "Reached the last question. Quiz ended.<br />";
         //If time is up, destroy session
         //Check questions via Session Variable
         //If last question, destroy session
