@@ -138,6 +138,8 @@
           if($_POST["q3b"] == "q3b" && $_POST["q3a"] != "q3a" && $_POST["q3c"] != "q3c" && $_POST["q3d"] != "q3d"){
             echo "Right answer";
             $_SESSION["score"] += 1;
+          }else{
+            echo "Wrong answer";
           }
           $_SESSION["question"] +=1;
           ?>
@@ -163,6 +165,8 @@
           if($_POST["q4d"] == "q4d" && $_POST["q4a"] != "q4a" && $_POST["q4b"] != "q4b" && $_POST["q4c"] != "q4c"){
             echo "Right answer";
             $_SESSION["score"] += 1;
+          }else{
+            echo "Wrong answer";
           }
           $_SESSION["question"] +=1;
           ?>
@@ -188,6 +192,8 @@
           if($_POST["q5"] == "galaxy"){
             echo "Right answer";
             $_SESSION["score"] += 1;
+          }else{
+            echo "Wrong answer";
           }
           $_SESSION["question"] +=1;
           ?>
@@ -209,6 +215,8 @@
           if($_POST["q6"] == "age"){
             echo "Right answer";
             $_SESSION["score"] += 1;
+          }else{
+            echo "Wrong answer";
           }
           $_SESSION["question"] +=1;
           ?>
