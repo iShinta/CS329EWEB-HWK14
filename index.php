@@ -69,7 +69,8 @@
     }else{ //In a session
       echo "You're logged in";
       //Check if time is up
-
+      echo "Current score: ".$_SESSION["score"];
+      echo "Question ".$_SESSION["question"];
 
       //If time is up, destroy session
       //Check questions via Session Variable
