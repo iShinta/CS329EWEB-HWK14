@@ -184,7 +184,7 @@
         }
       }else if($_SESSION["question"] == 5){ //Q5
         if(isset($_POST["q5"])){
-          echo "Check Question 5";
+          echo "Check Question 5<br/>";
           if($_POST["q5"] == "galaxy"){
             echo "Right answer";
             $_SESSION["score"] += 1;
@@ -207,7 +207,7 @@
         }
       }else if($_SESSION["question"] == 6){ //Q6
         if(isset($_POST["q6"])){
-          echo "Check Question 6";
+          echo "Check Question 6<br/>";
           if($_POST["q6"] == "age"){
             echo "Right answer";
             $_SESSION["score"] += 1;
