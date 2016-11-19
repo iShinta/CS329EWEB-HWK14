@@ -79,9 +79,12 @@
 
       if($_SESSION["question"] == 1){ //Q1
         if(isset($_POST["q1"])){
-          echo "Check Question 1";
+          // echo "Check Question 1";
           if($_POST["q1"] == "q1b"){
+            echo "Right answer";
             $_SESSION["score"] += 1;
+          }else{
+            echo "Wrong answer";
           }
           $_SESSION["question"] +=1;
           ?>
