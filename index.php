@@ -129,7 +129,7 @@
           <?php
         }
       }else if($_SESSION["question"] == 3){ //Q3
-        if(isset($_POST["q3"])){
+        if(isset($_POST["q3a"]) || isset($_POST["q3b"]) || isset($_POST["q3c"]) || isset($_POST["q3d"])){
           echo "Check Question 3";
           if($_POST["q3b"] == "Yes"){
             echo "Right answer";
@@ -154,7 +154,7 @@
           <?php
         }
       }else if($_SESSION["question"] == 4){ //Q4
-        if(isset($_POST["q4"])){
+        if(isset($_POST["q4a"]) || isset($_POST["q4b"]) || isset($_POST["q4c"]) || isset($_POST["q4d"])){
           echo "Check Question 4";
           if($_POST["q4b"] == "Yes"){
             echo "Right answer";
@@ -262,7 +262,7 @@
 </head>
 
 <body>
-  <div class="content">
+  <div class="container">
     <h1>Astronomy Quiz</h1>
     <?php start(); ?>
   </div>
