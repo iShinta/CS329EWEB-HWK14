@@ -69,6 +69,9 @@
         showLogin();
       }
     }else{ //In a session
+      if(isset($_SESSION)){
+        echo "Still in session";
+      }
       echo "You're logged in ".$_COOKIE["id"]."<br/>";
       print_r("Current score: ".$_SESSION["score"]."<br />");
       print_r("Question ".$_SESSION["question"]."<br />");
