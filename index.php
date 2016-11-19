@@ -7,6 +7,8 @@
       if($_SERVER['REQUEST_METHOD'] === 'POST'){ //POST
         //Check credentials
         if(isset($_POST["username"])){
+          $username = $_POST["username"];
+          $password = $_POST["password"];
 
           //Get list of usernames and passwords
           $fh = fopen("passwd", "r");
