@@ -68,14 +68,118 @@
       }
     }else{ //In a session
       echo "You're logged in";
-      //Check if time is up
-      echo "Current score: ".$_SESSION["score"];
-      echo "Question ".$_SESSION["question"];
+      print_r("Current score: ".$_SESSION["score"]."<br />");
+      print_r("Question ".$_SESSION["question"]."<br />");
 
-      //If time is up, destroy session
-      //Check questions via Session Variable
-      //If last question, destroy session
-      destroySession();
+      if($_SESSION["question"] == 1){
+        if(isset($_POST["q1"])){
+          echo "Check Question 1";
+          if($_POST["q1"] == "q1b"){
+            $_SESSION["score"] += 1;
+          }
+          $_SESSION["question"] +=1;
+          ?>
+          <input type="submit" name="submit" value="Next Question" />
+          <?php
+        }else{
+          ?>
+          <div>1) According to Kepler the orbit of the earth is a circle with the sun at the center.
+      		<br /><input id="q1a" name="q1" type="radio" />a) True
+      		<br /><input id="q1b" name="q1" type="radio" />b) False</div>
+          <?php
+        }
+      }else if($_SESSION["question"] == 2){
+        if(isset($_POST["q2"])){
+          echo "Check Question 1";
+          if($_POST["q2"] == "q2a"){
+            $_SESSION["score"] += 1;
+          }
+          $_SESSION["question"] +=1;
+          ?>
+          <input type="submit" name="submit" value="Next Question" />
+          <?php
+        }else{
+          ?>
+          <div><br />2) Ancient astronomers did consider the heliocentric model of the solar system but rejected it because they could not detect parallax.
+      		<br /><input id="q2a" name="q2" type="radio" />a) True
+      		<br /><input id="q2b" name="q2" type="radio" />b) False</div>
+          <?php
+        }
+      }else if($_SESSION["question"] == 3){
+        if(isset($_POST["q1"])){
+          echo "Check Question 1";
+          if($_POST["q1"] == "q1b"){
+            $_SESSION["score"] += 1;
+          }
+          $_SESSION["question"] +=1;
+          ?>
+          <input type="submit" name="submit" value="Next Question" />
+          <?php
+        }else{
+          ?>
+          <div><br />2) Ancient astronomers did consider the heliocentric model of the solar system but rejected it because they could not detect parallax.
+      		<br /><input id="q2a" name="q2" type="radio" />a) True
+      		<br /><input id="q2b" name="q2" type="radio" />b) False</div>
+          <?php
+        }
+      }else if($_SESSION["question"] == 4){
+        if(isset($_POST["q1"])){
+          echo "Check Question 1";
+          if($_POST["q1"] == "q1b"){
+            $_SESSION["score"] += 1;
+          }
+          $_SESSION["question"] +=1;
+          ?>
+          <input type="submit" name="submit" value="Next Question" />
+          <?php
+        }else{
+          ?>
+          <div><br />2) Ancient astronomers did consider the heliocentric model of the solar system but rejected it because they could not detect parallax.
+      		<br /><input id="q2a" name="q2" type="radio" />a) True
+      		<br /><input id="q2b" name="q2" type="radio" />b) False</div>
+          <?php
+        }
+      }else if($_SESSION["question"] == 5){
+        if(isset($_POST["q1"])){
+          echo "Check Question 1";
+          if($_POST["q1"] == "q1b"){
+            $_SESSION["score"] += 1;
+          }
+          $_SESSION["question"] +=1;
+          ?>
+          <input type="submit" name="submit" value="Next Question" />
+          <?php
+        }else{
+          ?>
+          <div><br />2) Ancient astronomers did consider the heliocentric model of the solar system but rejected it because they could not detect parallax.
+      		<br /><input id="q2a" name="q2" type="radio" />a) True
+      		<br /><input id="q2b" name="q2" type="radio" />b) False</div>
+          <?php
+        }
+      }else if($_SESSION["question"] == 6){
+        if(isset($_POST["q1"])){
+          echo "Check Question 1";
+          if($_POST["q1"] == "q1b"){
+            $_SESSION["score"] += 1;
+          }
+          $_SESSION["question"] +=1;
+          ?>
+          <input type="submit" name="submit" value="Next Question" />
+          <?php
+        }else{
+          ?>
+          <div><br />2) Ancient astronomers did consider the heliocentric model of the solar system but rejected it because they could not detect parallax.
+      		<br /><input id="q2a" name="q2" type="radio" />a) True
+      		<br /><input id="q2b" name="q2" type="radio" />b) False</div>
+          <?php
+        }
+      }else if($_SESSION["question"] == 7){
+        echo "Reached the last question. Quiz ended."
+        //If time is up, destroy session
+        //Check questions via Session Variable
+        //If last question, destroy session
+        destroySession();
+      }
     }
   }
 
@@ -84,7 +188,7 @@
     <form method="post" action="#">
       <input type="text" name="username" />
       <input type="text" name="password" /><br />
-      <input type="submit" name="submit" value="Submit" />
+      <input type="submit" name="submit" value="Log In" />
       <input type="reset" name="reset" value="Reset" />
     </form>
   <?php }
