@@ -5,15 +5,16 @@
     //Selon l'avancee du quiz, on va inclure une version differente
     if(!isset($_COOKIE["id"])){ //Not in a session
       echo "Not signed in<br />";
-      //If session is open, that means Quiz has ended
-      if(isset($_SESSION)){
+      //If session variable exist, that means Quiz has ended
+      session_start();
+      if(isset($_SESSION["score"])){
         echo "Quiz ended.<br />";
+        print_r("Final score: ".$_SESSION["score"]."<br />");
+        print_r("You arrived at question ".$_SESSION["question"]."<br />");
         //Destroy session
         destroySession();
-      }else{
-        echo "Test";
       }
-      echo "test2";
+
       if($_SERVER['REQUEST_METHOD'] === 'POST'){ //POST
         //Check credentials
         if(isset($_POST["username"])){
@@ -53,7 +54,6 @@
               echo "Login Succeeded. Welcome ".$username. ".<br />";
               setcookie("id", $username, time()+900);
               setcookie("timeloggedin", time(), time()+900);
-              session_start();
               $_SESSION["question"] = 1;
               echo "Session ".$_SESSION["question"]."<br />";
               $_SESSION["score"] = 0;
