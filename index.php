@@ -75,7 +75,7 @@
       session_start();
       echo "You're logged in ".$_SESSION["name"]."<br/>";
       print_r("Current score: ".$_SESSION["score"]."<br /><br />");
-      print_r("<h2>Question ".$_SESSION["question"]."</h2><br /><br />");
+      print_r("<h2>Question ".$_SESSION["question"]."</h2>");
 
       if($_SESSION["question"] == 1){ //Q1
         if(isset($_POST["q1"])){
