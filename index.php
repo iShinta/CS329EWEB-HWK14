@@ -243,7 +243,7 @@
   function destroySession(){
     echo "Saving Scores";
     //Save state in results
-    $fh2 = fopen("passwd.txt", "a");
+    $fh2 = fopen("results", "a");
     fwrite($fh2, $_SESSION["name"].":".$_SESSION["score"]."\n");
     fclose($fh2);
 
