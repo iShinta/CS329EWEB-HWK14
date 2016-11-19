@@ -96,8 +96,8 @@
           ?>
           <form name="quiz" method="post">
             <div>1) According to Kepler the orbit of the earth is a circle with the sun at the center.
-        		<br /><input id="q1a" name="q1" type="radio" />a) True
-        		<br /><input id="q1b" name="q1" type="radio" />b) False</div>
+        		<br /><input value="q1a" name="q1" type="radio" />a) True
+        		<br /><input value="q1b" name="q1" type="radio" />b) False</div>
             <br /><input name="submit" type="submit" value="Grade this question" /><input name="reset" type="reset" value="Clear" />
           </form>
           <?php
@@ -106,7 +106,7 @@
         if(isset($_POST["q2"])){
           echo "Check Question 2";
           echo $_POST["q2"];
-          if($_POST["q2"] == "q2a"){
+          if($_POST["q2"] == on){
             echo "Right answer";
             $_SESSION["score"] += 1;
           }else{
@@ -122,8 +122,8 @@
           ?>
           <form name="quiz" method="post">
             <div><br />2) Ancient astronomers did consider the heliocentric model of the solar system but rejected it because they could not detect parallax.
-        		<br /><input id="q2a" name="q2" type="radio" />a) True
-      		  <br /><input id="q2b" name="q2" type="radio" />b) False</div>
+        		<br /><input value="q2a" name="q2" type="radio" />a) True
+      		  <br /><input value="q2b" name="q2" type="radio" />b) False</div>
             <br /><input name="submit" type="submit" value="Grade this question" /><input name="reset" type="reset" value="Clear" />
           </form>
           <?php
@@ -145,10 +145,10 @@
           ?>
           <form name="quiz" method="post">
             <div><br />3) The total amount of energy that a star emits is directly related to its
-        		<br /><input id="q3a" name="q3a" type="checkbox" />a) surface gravity and magnetic field
-        		<br /><input id="q3b" name="q3b" type="checkbox" />b) radius and temperature
-        		<br /><input id="q3c" name="q3c" type="checkbox" />c) pressure and volume
-        		<br /><input id="q3d" name="q3d" type="checkbox" />d) location and velocity</div>
+        		<br /><input value="q3a" name="q3a" type="checkbox" />a) surface gravity and magnetic field
+        		<br /><input value="q3b" name="q3b" type="checkbox" />b) radius and temperature
+        		<br /><input value="q3c" name="q3c" type="checkbox" />c) pressure and volume
+        		<br /><input value="q3d" name="q3d" type="checkbox" />d) location and velocity</div>
             <br /><input name="submit" type="submit" value="Grade this question" /><input name="reset" type="reset" value="Clear" />
           </form>
           <?php
