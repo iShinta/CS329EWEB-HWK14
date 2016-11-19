@@ -4,8 +4,15 @@
   function start(){
     //Selon l'avancee du quiz, on va inclure une version differente
     if(!isset($_COOKIE["id"])){ //Not in a session
-      echo "Not in a session";
+      echo "Not signed in";
       if($_SERVER['REQUEST_METHOD'] === 'POST'){ //POST
+        //If session is open, that means Quiz has ended
+        if(isset($_SESSION)){
+          echo "Quiz ended.";
+          //Destroy session
+          destroySession();
+        }
+
         //Check credentials
         if(isset($_POST["username"])){
           $username = $_POST["username"];
@@ -24,8 +31,9 @@
           fclose($fh);
 
           if(array_key_exists($username, $usertest)){ //Already took the test
-            echo "Sorry. That person already took the test";
+            echo "Sorry. " .$username. " already took the test";
           }else{
+            echo "You didn't take the test yet";
             //Get list of usernames and passwords
             $fh = fopen("passwd", "r");
             //Check if username is already taken
@@ -40,10 +48,12 @@
 
             //Check if name is authorized
             if(array_key_exists($username, $userlist) && strcmp($userlist[$username], $password)){
-              //echo "Login Succeeded. Welcome ".$username. ".<br />";
+              echo "Login Succeeded. Welcome ".$username. ".<br />";
               setcookie("id", $username, time()+900);
               setcookie("timeloggedin", time(), time()+900);
               session_start();
+              $_SESSION["question"] = 1;
+              $_SESSION["score"] = 0;
               ?><a href="index.php">Start the Quiz</a><?php
             }else{
               echo "Login Failed.<br />Bad username or password";
@@ -80,8 +90,14 @@
 
   function destroySession(){
     //Save state in results
+    $fh2 = fopen("passwd.txt", "a");
+    fwrite($fh2, $username.":".$_SESSION["score"]."\n");
+    fclose($fh2);
 
-    //Destroy session
+    // remove all session variables
+    session_unset();
+    // destroy the session
+    session_destroy();
   }
 ?>
 
