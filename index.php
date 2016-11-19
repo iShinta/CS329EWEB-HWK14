@@ -122,9 +122,9 @@
           <?php
         }
       }else if($_SESSION["question"] == 3){ //Q3
-        if(isset($_POST["q1"])){
+        if(isset($_POST["q3"])){
           echo "Check Question 1";
-          if($_POST["q1"] == "q1b"){
+          if($_POST["q3"] == "q3b"){
             $_SESSION["score"] += 1;
           }
           $_SESSION["question"] +=1;
