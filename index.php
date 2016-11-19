@@ -81,7 +81,7 @@
 
       if($_SESSION["question"] == 1){ //Q1
         if(isset($_POST["q1"])){
-          echo "Check Question 1";
+          echo "Check Question 1<br/>";
           if($_POST["q1"] == "q1b"){
             echo "Right answer";
             $_SESSION["score"] += 1;
@@ -106,7 +106,7 @@
         }
       }else if($_SESSION["question"] == 2){ //Q2
         if(isset($_POST["q2"])){
-          echo "Check Question 2";
+          echo "Check Question 2<br/>";
 
           if($_POST["q2"] == 'q2a'){
             echo "Right answer";
@@ -132,7 +132,7 @@
         }
       }else if($_SESSION["question"] == 3){ //Q3
         if(isset($_POST["q3a"]) || isset($_POST["q3b"]) || isset($_POST["q3c"]) || isset($_POST["q3d"])){
-          echo "Check Question 3";
+          echo "Check Question 3<br/>";
           if($_POST["q3b"] == "q3b" && $_POST["q3a"] != "q3a" && $_POST["q3c"] != "q3c" && $_POST["q3d"] != "q3d"){
             echo "Right answer";
             $_SESSION["score"] += 1;
@@ -157,7 +157,7 @@
         }
       }else if($_SESSION["question"] == 4){ //Q4
         if(isset($_POST["q4a"]) || isset($_POST["q4b"]) || isset($_POST["q4c"]) || isset($_POST["q4d"])){
-          echo "Check Question 4";
+          echo "Check Question 4<br/>";
           if($_POST["q4d"] == "q4d" && $_POST["q4a"] != "q4a" && $_POST["q4b"] != "q4b" && $_POST["q4c"] != "q4c"){
             echo "Right answer";
             $_SESSION["score"] += 1;
@@ -243,13 +243,13 @@
   <?php }
 
   function destroySession(){
-    echo "Saving Scores";
+    echo "Saving Scores<br/>";
     //Save state in results
     $fh2 = fopen("results", "a");
     fwrite($fh2, $_SESSION["name"].":".$_SESSION["score"]."\n");
     fclose($fh2);
 
-    echo "Destrying Session";
+    echo "Destrying Session<br/>";
     setcookie("id", "", time()-3600);
     setcookie("timeloggedin", "", time()-3600);
     // remove all session variables
