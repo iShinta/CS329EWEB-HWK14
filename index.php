@@ -105,6 +105,7 @@
       }else if($_SESSION["question"] == 2){ //Q2
         if(isset($_POST["q2"])){
           echo "Check Question 2";
+          echo $_POST["q2"];
           if($_POST["q2"] == "q2a"){
             echo "Right answer";
             $_SESSION["score"] += 1;
