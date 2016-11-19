@@ -14,6 +14,7 @@
         }else{
           echo "Test";
         }
+        echo "test2";
 
         //Check credentials
         if(isset($_POST["username"])){
