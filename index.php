@@ -74,7 +74,7 @@
       print_r("Current score: ".$_SESSION["score"]."<br />");
       print_r("Question ".$_SESSION["question"]."<br />");
 
-      if($_SESSION["question"] == 1){
+      if($_SESSION["question"] == 1){ //Q1
         if(isset($_POST["q1"])){
           echo "Check Question 1";
           if($_POST["q1"] == "q1b"){
@@ -96,11 +96,14 @@
           </form>
           <?php
         }
-      }else if($_SESSION["question"] == 2){
+      }else if($_SESSION["question"] == 2){ //Q2
         if(isset($_POST["q2"])){
           echo "Check Question 1";
           if($_POST["q2"] == "q2a"){
+            echo "Right answer";
             $_SESSION["score"] += 1;
+          }else{
+            echo "Wrong answer";
           }
           $_SESSION["question"] +=1;
           ?>
@@ -118,7 +121,7 @@
           </form>
           <?php
         }
-      }else if($_SESSION["question"] == 3){
+      }else if($_SESSION["question"] == 3){ //Q3
         if(isset($_POST["q1"])){
           echo "Check Question 1";
           if($_POST["q1"] == "q1b"){
@@ -133,14 +136,16 @@
         }else{
           ?>
           <form name="quiz" method="post">
-            <div><br />2) Ancient astronomers did consider the heliocentric model of the solar system but rejected it because they could not detect parallax.
-        		<br /><input id="q2a" name="q2" type="radio" />a) True
-        		<br /><input id="q2b" name="q2" type="radio" />b) False</div>
+            <div><br />3) The total amount of energy that a star emits is directly related to its
+        		<br /><input id="q3a" name="q3a" type="checkbox" />a) surface gravity and magnetic field
+        		<br /><input id="q3b" name="q3b" type="checkbox" />b) radius and temperature
+        		<br /><input id="q3c" name="q3c" type="checkbox" />c) pressure and volume
+        		<br /><input id="q3d" name="q3d" type="checkbox" />d) location and velocity</div>
             <br /><input name="submit" type="submit" value="Grade this question" /><input name="reset" type="reset" value="Clear" />
           </form>
           <?php
         }
-      }else if($_SESSION["question"] == 4){
+      }else if($_SESSION["question"] == 4){ //Q4
         if(isset($_POST["q1"])){
           echo "Check Question 1";
           if($_POST["q1"] == "q1b"){
@@ -155,14 +160,16 @@
         }else{
           ?>
           <form name="quiz" method="post">
-            <div><br />2) Ancient astronomers did consider the heliocentric model of the solar system but rejected it because they could not detect parallax.
-        		<br /><input id="q2a" name="q2" type="radio" />a) True
-        		<br /><input id="q2b" name="q2" type="radio" />b) False</div>
+            <div><br />4) Stars that live the longest have
+        		<br /><input id="q4a" name="q4a" type="checkbox" />a) high mass
+        		<br /><input id="q4b" name="q4b" type="checkbox" />b) high temperature
+        		<br /><input id="q4c" name="q4c" type="checkbox" />c) lots of hydrogen
+        		<br /><input id="q4d" name="q4d" type="checkbox" />d) small mass</div>
             <br /><input name="submit" type="submit" value="Grade this question" /><input name="reset" type="reset" value="Clear" />
           </form>
           <?php
         }
-      }else if($_SESSION["question"] == 5){
+      }else if($_SESSION["question"] == 5){ //Q5
         if(isset($_POST["q1"])){
           echo "Check Question 1";
           if($_POST["q1"] == "q1b"){
@@ -177,14 +184,12 @@
         }else{
           ?>
           <form name="quiz" method="post">
-            <div><br />2) Ancient astronomers did consider the heliocentric model of the solar system but rejected it because they could not detect parallax.
-        		<br /><input id="q2a" name="q2" type="radio" />a) True
-        		<br /><input id="q2b" name="q2" type="radio" />b) False</div>
+            <div>5) A collection of a hundred billion stars, gas, and dust is called a <input id="q5" name="q5" type="text" />.</div>
             <br /><input name="submit" type="submit" value="Grade this question" /><input name="reset" type="reset" value="Clear" />
           </form>
           <?php
         }
-      }else if($_SESSION["question"] == 6){
+      }else if($_SESSION["question"] == 6){ //Q6
         if(isset($_POST["q1"])){
           echo "Check Question 1";
           if($_POST["q1"] == "q1b"){
@@ -199,9 +204,7 @@
         }else{
           ?>
           <form name="quiz" method="post">
-            <div><br />2) Ancient astronomers did consider the heliocentric model of the solar system but rejected it because they could not detect parallax.
-        		<br /><input id="q2a" name="q2" type="radio" />a) True
-        		<br /><input id="q2b" name="q2" type="radio" />b) False</div>
+            <div><br />6) The inverse of the Hubble's constant is a measure of the <input id="q6" name="q6" type="text" /> of the universe.</div>
             <br /><input name="submit" type="submit" value="Grade this question" /><input name="reset" type="reset" value="Clear" />
           </form>
           <?php
