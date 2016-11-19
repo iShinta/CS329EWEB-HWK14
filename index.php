@@ -82,7 +82,9 @@
           }
           $_SESSION["question"] +=1;
           ?>
-          <input type="submit" name="submit" value="Next Question" />
+          <form name="quiz" method="post">
+            <input type="submit" name="submit" value="Next Question" />
+          </form>
           <?php
         }else{
           ?>
@@ -102,7 +104,9 @@
           }
           $_SESSION["question"] +=1;
           ?>
-          <input type="submit" name="submit" value="Next Question" />
+          <form name="quiz" method="post">
+            <input type="submit" name="submit" value="Next Question" />
+          </form>
           <?php
         }else{
           ?>
@@ -122,7 +126,9 @@
           }
           $_SESSION["question"] +=1;
           ?>
-          <input type="submit" name="submit" value="Next Question" />
+          <form name="quiz" method="post">
+            <input type="submit" name="submit" value="Next Question" />
+          </form>
           <?php
         }else{
           ?>
@@ -142,7 +148,9 @@
           }
           $_SESSION["question"] +=1;
           ?>
-          <input type="submit" name="submit" value="Next Question" />
+          <form name="quiz" method="post">
+            <input type="submit" name="submit" value="Next Question" />
+          </form>
           <?php
         }else{
           ?>
@@ -162,7 +170,9 @@
           }
           $_SESSION["question"] +=1;
           ?>
-          <input type="submit" name="submit" value="Next Question" />
+          <form name="quiz" method="post">
+            <input type="submit" name="submit" value="Next Question" />
+          </form>
           <?php
         }else{
           ?>
@@ -182,7 +192,9 @@
           }
           $_SESSION["question"] +=1;
           ?>
-          <input type="submit" name="submit" value="Next Question" />
+          <form name="quiz" method="post">
+            <input type="submit" name="submit" value="Next Question" />
+          </quiz>
           <?php
         }else{
           ?>
