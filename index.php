@@ -53,7 +53,9 @@
               setcookie("timeloggedin", time(), time()+900);
               session_start();
               $_SESSION["question"] = 1;
+              echo "Session ".$_SESSION["question"];
               $_SESSION["score"] = 0;
+              echo "Score ".$_SESSION["score"];
               ?><a href="index.php">Start the Quiz</a><?php
             }else{
               echo "Login Failed.<br />Bad username or password";
