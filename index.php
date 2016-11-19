@@ -217,11 +217,13 @@
   <?php }
 
   function destroySession(){
+    echo "Saving Scores";
     //Save state in results
     $fh2 = fopen("passwd.txt", "a");
     fwrite($fh2, $username.":".$_SESSION["score"]."\n");
     fclose($fh2);
 
+    echo "Destrying Session";
     // remove all session variables
     session_unset();
     // destroy the session
